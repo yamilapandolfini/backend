@@ -30,11 +30,11 @@ async function operaciones(unaOperacion: string) {
     let otroNumero: number = 5;
     let calculoAResolver: string = unaOperacion;
     const resultadoOperacion:any = await sleep(2000).then(() => operacion(unNumero,otroNumero,calculoAResolver));
-    console.log(resultadoOperacion) //comentado para que al menos se muestre funcionadidad de dynamic import
+    //console.log(resultadoOperacion) //comentado para que al menos se muestre funcionadidad de dynamic import
 }
 
 //Prueba Operacion Suma
-//operaciones("suma");
+operaciones("suma");
 
 //Prueba Operacion Resta
 operaciones("resta");
