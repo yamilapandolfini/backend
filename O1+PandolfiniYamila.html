@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entregable 3- Opcion 1</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/6.6.3/rxjs.umd.min.js"></script>
+</head>
+<body>
+    <input type="text">
+    <span></span>
+
+    <script>
+        const { Observable, pipe } = rxjs
+        const { map } = rxjs.operators
+
+        function mirrorInput() {
+            return new Observable(suscriber => {
+
+                function ateEventInput() {
+                    let data = document.querySelector('input').value
+
+                    if (data == 'error') {
+                        suscriber.error('Error de entrada')
+                    }
+                    else if (data == 'complete') {
+                        suscriber.complete()
+                    }
+                    else {
+                        
+                        let splitString = data.split("");
+                        let mirrorString = splitString.reverse();
+                        let concatString = mirrorString.join("");
+
+                        let dataMirror = concatString;
+                        suscriber.next(dataMirror)
+                    }
+                }
+
+                document.querySelector('input').addEventListener('input', ateEventInput)
+
+                return () => {
+                    document.querySelector('input').removeEventListener('input', ateEventInput)
+                    document.querySelector('input').disabled = true
+                    document.querySelector('span').innerText = ''
+                    console.warn('Observable Input return')
+                }
+            })
+        }
+
+        let suscriptorMirrorInput = mirrorInput()
+            .subscribe(
+                data => {
+                    document.querySelector('span').innerText = data
+                },  
+                error => console.error(error),
+                () => console.warn('Observable Input complete ') 
+            )
+
+        setTimeout(() => {
+            console.warn('Observable Input desuscripción ')
+            suscriptorMirrorInput.unsubscribe()
+        }, 30000)
+
+    </script>
+</body>
+</html>
