@@ -2,11 +2,7 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "main": "PandolfiniYamila.js",
-  "dependencies": {
-    "typescript": "^4.5.5"
-  },
-  "devDependencies": {},
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/yamilapandolfini/backend/issues"
   },
-  "homepage": "https://github.com/yamilapandolfini/backend#readme"
+  "homepage": "https://github.com/yamilapandolfini/backend#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "moment": "^2.29.1"
+  }
 }

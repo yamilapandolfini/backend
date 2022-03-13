@@ -1,0 +1,26 @@
+[
+	{
+		"title": "Patineta",
+		"Price": 1500,
+		"thumbnail": "https://auteco.vteximg.com.br/arquivos/ids/194250-550-550/LITE-ecommerce.jpg?v=637382803501800000",
+		"id": 1
+	},
+	{
+		"title": "Patines",
+		"Price": 2500,
+		"thumbnail": "https://phantom-marca.unidadeditorial.es/d51d0a4ad3a33596caf9f3517ebc81fa/crop/0x78/1000x639/resize/1320/f/jpg/assets/multimedia/imagenes/2021/05/31/16224732603005.jpg",
+		"id": 2
+	}
+]	{
+		"title": "Bicicleta",
+		"Price": 4500,
+		"thumbnail": "https://i.pinimg.com/originals/a0/92/57/a09257e284b0040ad926b52b2c54e85e.png",
+		"id": 3
+	},
+	{
+		"title": "Monopatin",
+		"Price": 3500,
+		"thumbnail": "http://d3ugyf2ht6aenh.cloudfront.net/stores/001/245/791/products/718e032a-238d-42be-9830-d470019ae09a-78dd77bf4cb874088c16232991142539-640-0.jpg",
+		"id": 4
+	}
+]
